@@ -28,11 +28,17 @@ public class ArrayTrianglePath {
         int rows = triangle.size();
         int[] minimumSum = new int[rows];
 
-        for (int i = 0; i < rows; i++) {
+        int columnsOfLastRow = rows;
+
+        /** Last row's column **/
+        for (int i = 0; i < columnsOfLastRow; i++) {
             minimumSum[i] = triangle.get(rows - 1).get(i);
         }
 
+        /** Iterating from 2nd last row to first row **/
         for (int row = rows - 2; row >= 0; row--) {
+
+            /** Finding the min of between to adjacent column of ith row **/
             for (int j = 0; j < triangle.get(row).size(); j++) {
                 minimumSum[j] = triangle.get(row).get(j) + Math.min(minimumSum[j], minimumSum[j + 1]);
             }

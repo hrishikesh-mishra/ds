@@ -36,6 +36,8 @@ class SumOfTwoElementsInArrayTest {
     public static void main(String[] args) {
         int[] array = {2, 7, 11, 15};
         System.out.println("Array: " + Arrays.toString(array));
-        System.out.println("Sum Indices : " + Arrays.toString(SumOfTwoElementsInArray.find(array, 13)));
+        int k = 13;
+        System.out.println("K: " + k);
+        System.out.println("Sum Indices : " + Arrays.toString(SumOfTwoElementsInArray.find(array, k)));
     }
 }

@@ -54,6 +54,9 @@ public class PairsWithSum {
 class PairsWithSumTest {
     public static void main(String[] args) {
         int[] array = {-2, -1, 0, 3, 5, 6, 7, 9, 13, 14};
-        findPair(array, 13);
+        int k = 13;
+        System.out.println(Arrays.toString(array));
+        System.out.println("K: " + k);
+        findPair(array, k);
     }
 }

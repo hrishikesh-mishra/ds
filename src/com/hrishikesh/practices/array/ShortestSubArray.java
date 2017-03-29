@@ -119,7 +119,6 @@ public class ShortestSubArray {
 
 class ShortestSubArrayTest {
     public static void main(String[] args) {
-
         int[] bigArray = {7, 5, 9, 0, 2, 1, 3, 5, 7, 9, 1, 1, 5, 8, 8, 9, 7};
         int[] smallArray = {1, 5, 9};
         System.out.println("Big Array: " + Arrays.toString(bigArray));

@@ -15,6 +15,10 @@ import static com.hrishikesh.practices.array.EqualSubArrayOfLettersAndNumbers.ge
  * letters and numbers.
  * ;
  * ;
+ * ;
+ * Hint:
+ * - If there is substring of equal number of letters and numbers, diff count would be repeated
+ * ;
  * Algorithm:
  * - Create an array diff_array of same size of given array
  * - Populate each element of diff_array with <code>total_number_found - total_letter_found</code> till current index
@@ -41,6 +45,9 @@ public class EqualSubArrayOfLettersAndNumbers {
 
     public static char[] getLongestSubArray(char[] array) {
         int[] diffArray = populateDiffArray(array);
+
+        System.out.println(Arrays.toString(diffArray));
+
         DiffDetail diffDetail = getLongestSubArrayFromDiff(diffArray);
         return getArray(array, diffDetail.firstIndex + 1, diffDetail.lastIndex);
     }

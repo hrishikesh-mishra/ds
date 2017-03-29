@@ -18,6 +18,8 @@ public class CountAll2s {
 
     public static int count(int n) {
         int totalTwos = 0;
+
+        /** Iterate all numbers from 2 to n **/
         for (int i = 2; i <= n; i++) {
             totalTwos += getTwos(i);
         }
@@ -27,9 +29,13 @@ public class CountAll2s {
     private static int getTwos(int i) {
         int count = 0;
         while (i > 0) {
+
+            /** Check it remainder is 2 or nor **/
             if (i % 10 == 2) {
                 count++;
             }
+
+
             i /= 10;
         }
         return count;

@@ -16,7 +16,7 @@ import static com.hrishikesh.practices.array.LargestContiguousSum.sum;
  * Algorithm:
  * - Set maxSum = 0 and sum = 0
  * - Iterate all element of array one by one
- * - - sum += sum
+ * - - sum += array[i]
  * - - if maxSum < sum then
  * - - - Set maxSum = sum
  * - - Else If sum < 0 then

@@ -39,7 +39,6 @@ public class LongestConsecutiveSequenceInArray {
                 previousElement--;
             }
 
-
             while (set.contains(nextElement)) {
                 count++;
                 set.remove(nextElement);

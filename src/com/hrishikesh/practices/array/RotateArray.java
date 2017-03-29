@@ -40,9 +40,10 @@ public class RotateArray {
 class RotateArrayTest {
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5, 6, 7};
-
+        int k = 3;
         System.out.println("Before Rotate: " + Arrays.toString(array));
-        rotate(array, 3);
+        System.out.println("K: " + k);
+        rotate(array, k);
         System.out.println("After Rotate: " + Arrays.toString(array));
     }
 }

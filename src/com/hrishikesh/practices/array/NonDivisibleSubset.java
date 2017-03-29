@@ -8,6 +8,10 @@ import java.util.Map;
  * Problem:
  * Given a set, S , of  n distinct integers, print the size of a maximal subset, S1 , of  S where the sum of any 2
  * numbers in S1 is not evenly divisible by k.
+ * ;
+ * ;
+ * Hint:
+ * Remainder
  *
  * @author hrishikesh.mishra
  */
