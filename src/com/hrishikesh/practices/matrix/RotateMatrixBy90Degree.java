@@ -88,11 +88,11 @@ class RotateMatrixBy90DegreeTest {
         };
 
         rotateBy90Degree(matrix3X3);
-        printMatrxi(matrix3X3);
+        printMatrix(matrix3X3);
     }
 
 
-    private static void printMatrxi( int [][] matrix){
+    private static void printMatrix(int [][] matrix){
         for (int i=0; i< matrix.length; i++){
             for (int j=0; j <matrix.length; j++){
                 System.out.print(matrix[i][j] + " ");
