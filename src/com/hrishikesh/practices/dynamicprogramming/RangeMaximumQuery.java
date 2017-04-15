@@ -9,6 +9,7 @@ import static com.hrishikesh.practices.dynamicprogramming.RangeMaximumQuery.buil
  * Range Maximum Query
  *
  * @author hrishikesh.mishra
+ * @link http://hrishikeshmishra.com/range-maximum-query/
  */
 public class RangeMaximumQuery {
 

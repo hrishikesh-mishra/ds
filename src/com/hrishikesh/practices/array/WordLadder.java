@@ -18,6 +18,7 @@ import static com.hrishikesh.practices.array.WordLadder.find;
  * Find the length of shortest transformation sequence from beginWord to endWord.
  *
  * @author hrishikesh.mishra
+ * @link http://hrishikeshmishra.com/word-ladder/
  */
 public class WordLadder {
 

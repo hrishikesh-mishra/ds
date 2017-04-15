@@ -9,6 +9,7 @@ import static com.hrishikesh.practices.string.SuffixArray.createSuffixArray;
  * Suffix Array Implementation
  *
  * @author hrishikesh.mishra
+ * @link http://hrishikeshmishra.com/suffix-array-implementation/
  */
 public class SuffixArray {
 

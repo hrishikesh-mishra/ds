@@ -10,6 +10,7 @@ import java.util.Objects;
  * Hint : Solution is based on  horizontal distances
  *
  * @author hrishikesh.mishra
+ * @link http://hrishikeshmishra.com/binary-tree-vertical-sum-using-doubly-linked-list-dll/
  */
 public class BinaryTreeVerticalSumUsingDLL {
 

@@ -11,6 +11,7 @@ import static com.hrishikesh.practices.string.LexicographicOrder.getNextPermutat
  *
  * @author hrishikesh.mishra
  * @quora https://www.quora.com/How-would-you-explain-an-algorithm-that-generates-permutations-using-lexicographic-ordering
+ * @link http://hrishikeshmishra.com/lexicographic-order/
  */
 public class LexicographicOrder {
 

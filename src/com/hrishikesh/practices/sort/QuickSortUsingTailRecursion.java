@@ -7,6 +7,7 @@ import java.util.Arrays;
  * Quick Sort Using Tail Recursion
  *
  * @author hrishikesh.mishra
+ * @link http://hrishikeshmishra.com/quick-sort-using-tail-recursion/
  */
 public class QuickSortUsingTailRecursion {
 

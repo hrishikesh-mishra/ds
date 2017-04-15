@@ -3,10 +3,12 @@ package com.hrishikesh.practices.binarytree;
 import java.util.Objects;
 
 /**
+ * Problem:
  * Binary Tree Maximum Path Sum
  * For a binary tree, find the maximum path sum. The path may start and end at any node in the tree.
  *
  * @author hrishikesh.mishra
+ * @link http://hrishikeshmishra.com/binary-tree-maximum-path-sum/
  */
 public class BinaryTreeMaximumPathSum {
 

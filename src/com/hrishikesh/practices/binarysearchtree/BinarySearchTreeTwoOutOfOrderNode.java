@@ -12,6 +12,7 @@ import java.util.Objects;
  * In given binary search tree two nodes are swapped, fix this.
  *
  * @author hrishikesh.mishra
+ * @link http://hrishikeshmishra.com/binary-search-tree-two-nodes-order/
  */
 public class BinarySearchTreeTwoOutOfOrderNode {
 

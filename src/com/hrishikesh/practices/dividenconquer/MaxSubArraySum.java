@@ -10,6 +10,7 @@ import static com.hrishikesh.practices.dividenconquer.MaxSubArraySum.findMaximum
  * Given a array find maximum sub-array sum.
  *
  * @author hrishikesh.mishra
+ * @link http://hrishikeshmishra.com/maximum-sub-array-sum/
  */
 public class MaxSubArraySum {
 

@@ -9,6 +9,7 @@ import java.util.Queue;
  * Mirror image of binary tree without Recursion
  *
  * @author hrishikesh.mishra
+ * @link http://hrishikeshmishra.com/mirror-image-binary-tree-without-recursion/
  */
 public class BinaryTreeMirrorWithoutRecursion {
 

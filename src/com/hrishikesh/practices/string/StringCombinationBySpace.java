@@ -8,6 +8,7 @@ import java.util.List;
  * Generate possible strings that can be made by placing spaces.
  *
  * @author hrishikesh.mishra
+ * @link http://hrishikeshmishra.com/generate-possible-strings-can-made-placing-spaces/
  */
 public class StringCombinationBySpace {
 

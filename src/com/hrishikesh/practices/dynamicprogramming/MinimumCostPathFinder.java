@@ -8,6 +8,7 @@ package com.hrishikesh.practices.dynamicprogramming;
  * Constraint: You can move only right or down.
  *
  * @author hrishikesh.mishra
+ * @link http://hrishikeshmishra.com/minimum-cost-path-finder/
  */
 public class MinimumCostPathFinder {
 

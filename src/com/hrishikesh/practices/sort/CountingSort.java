@@ -13,6 +13,7 @@ import java.util.Arrays;
  * to place element x directly into its position in the output array.
  *
  * @author hrishikesh.mishra
+ * @link http://hrishikeshmishra.com/counting-sort/
  */
 public class CountingSort {
 

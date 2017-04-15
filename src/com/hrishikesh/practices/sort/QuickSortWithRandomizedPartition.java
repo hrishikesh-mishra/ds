@@ -5,9 +5,10 @@ import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * Problem:
- * Quick Sort with Randomized Parition
+ * Quick Sort with Randomized Partition
  *
  * @author hrishikesh.mishra
+ * @link http://hrishikeshmishra.com/quick-sort-randomized-partition/
  */
 public class QuickSortWithRandomizedPartition {
 

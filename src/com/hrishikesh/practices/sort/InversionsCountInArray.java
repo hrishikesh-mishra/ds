@@ -10,6 +10,7 @@ import static com.hrishikesh.practices.sort.InversionsCountInArray.getCountByMer
  * how far (or close) the array is from being sorted.
  *
  * @author hrishikesh.mishra
+ * @link http://hrishikeshmishra.com/inversion-count/
  */
 public class InversionsCountInArray {
 

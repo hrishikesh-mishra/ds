@@ -7,6 +7,7 @@ import java.util.Arrays;
  * Longest Repeated Substring (using Suffix Array)
  *
  * @author hrishikesh.mishra
+ * @link http://hrishikeshmishra.com/longest-repeated-substring-using-suffix-array/
  */
 public class LongestRepeatedSubstring {
 

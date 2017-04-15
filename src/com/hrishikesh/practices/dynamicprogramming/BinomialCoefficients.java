@@ -10,6 +10,7 @@ import static com.hrishikesh.practices.dynamicprogramming.BinomialCoefficients.g
  * (n k) = (n-1 k-1) + (n-1, k)
  *
  * @author hrishikesh.mishra
+ * @link http://hrishikeshmishra.com/compute-binomial-coefficients-m-n/
  */
 public class BinomialCoefficients {
 

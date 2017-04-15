@@ -14,6 +14,7 @@ import java.util.Objects;
  * Binary Tree Diagonal Traversal
  *
  * @author hrishikesh.mishra
+ * @link http://hrishikeshmishra.com/binary-tree-diagonal-traversal/
  */
 public class BinaryTreeDiagonalTraversal {
 

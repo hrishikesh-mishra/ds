@@ -7,6 +7,7 @@ import java.util.Arrays;
  * Reverse Quick Sort
  *
  * @author hrishikesh.mishra
+ * @link http://hrishikeshmishra.com/reverse-quick-sort/
  */
 public class ReverseQuickSort {
 
