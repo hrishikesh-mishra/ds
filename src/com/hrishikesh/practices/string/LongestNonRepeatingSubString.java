@@ -8,6 +8,7 @@ import java.util.Set;
 
 import static com.hrishikesh.practices.string.LongestNonRepeatingSubString.lengthOfLongestSubstring;
 import static com.hrishikesh.practices.string.LongestNonRepeatingSubString.lengthOfLongestSubstring2;
+import static com.hrishikesh.practices.string.LongestNonRepeatingSubString.lengthOfLongestSubstring3;
 
 /**
  * Problem:
@@ -99,6 +100,41 @@ public class LongestNonRepeatingSubString {
 
         return Math.max(previousLength, map.size());
     }
+
+
+    public static int lengthOfLongestSubstring3(String s) {
+        if (Objects.isNull(s)) {
+            return 0;
+        }
+
+        int maxLength = 0;
+        HashMap<Character, Integer> map = new HashMap<>();
+
+        for (int i = 0, j = 0; j < s.length(); j++) {
+
+            char c = s.charAt(j);
+
+            if (map.containsKey(c)) {
+
+                maxLength = Math.max(maxLength, j - i);
+                int duplicateIndex = map.get(c);
+
+                /** Removing all element till duplicate from hash **/
+                for (int index = i; index <= duplicateIndex; index++) {
+                    map.remove(s.charAt(index));
+                }
+
+                i = duplicateIndex + 1;
+
+                map.put(c, j);
+
+            } else {
+                map.put(c, j);
+            }
+        }
+
+        return Math.max(maxLength, map.size());
+    }
 }
 
 class LongestNonRepeatingSubStringTest {
@@ -107,5 +143,6 @@ class LongestNonRepeatingSubStringTest {
 
         System.out.println("String : " + s1 + ", Longest Non Repeating SubString :" + lengthOfLongestSubstring2(s1));
         System.out.println("String : " + s1 + ", Longest Non Repeating SubString :" + lengthOfLongestSubstring(s1));
+        System.out.println("String : " + s1 + ", Longest Non Repeating SubString :" + lengthOfLongestSubstring3(s1));
     }
 }
