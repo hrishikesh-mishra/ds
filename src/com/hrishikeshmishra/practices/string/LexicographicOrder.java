@@ -8,6 +8,14 @@ import static com.hrishikeshmishra.practices.string.LexicographicOrder.getNextPe
  * Problem:
  * Lexicographic Order
  * Generates permutations using lexicographic ordering.
+ * ;
+ * ;
+ * Algorithm:
+ * - Start from end and find next smaller value between two adjacent
+ * - Swap that value with next large number from end
+ * - And sort all number from accesending order
+ * ;
+ * ;
  *
  * @author hrishikesh.mishra
  * @quora https://www.quora.com/How-would-you-explain-an-algorithm-that-generates-permutations-using-lexicographic-ordering
@@ -19,19 +27,24 @@ public class LexicographicOrder {
 
         int x = array.length - 1;
 
+        /** Checking for possibility **/
         while (x > 0 && array[x - 1] >= array[x]) {
             x--;
         }
 
+        /** When all permutation done **/
         if (x <= 0) {
             throw new RuntimeException("This was last permutation.");
         }
 
         int y = array.length - 1;
+
+        /** Find next largest fox array[x - 1] **/
         while (array[y] <= array[x - 1]) {
             y--;
         }
 
+        /** Swap **/
         swap(array, x - 1, y);
 
         reverse(array, x, array.length - 1);
