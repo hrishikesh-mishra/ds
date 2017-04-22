@@ -5,6 +5,9 @@ import java.util.Arrays;
 /**
  * Problem:
  * Reverse Quick Sort
+ * ;
+ * Algorithm:
+ * - Just Change comparision logic for Quick Sort
  *
  * @author hrishikesh.mishra
  * @link http://hrishikeshmishra.com/reverse-quick-sort/
@@ -27,6 +30,8 @@ public class ReverseQuickSort {
         int i = p - 1;
         int j = p;
         while (j < r) {
+
+            /** Just change compare condition **/
             if (array[j] > array[r]) {
                 swap(array, i + 1, j);
                 i++;

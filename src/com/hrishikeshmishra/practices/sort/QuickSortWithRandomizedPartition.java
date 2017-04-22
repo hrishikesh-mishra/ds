@@ -6,6 +6,10 @@ import java.util.concurrent.ThreadLocalRandom;
 /**
  * Problem:
  * Quick Sort with Randomized Partition
+ * ;
+ * Algorithm:
+ * - Same as quick partition but,
+ * - Before partitioning swap one random index
  *
  * @author hrishikesh.mishra
  * @link http://hrishikeshmishra.com/quick-sort-randomized-partition/
