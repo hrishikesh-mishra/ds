@@ -108,10 +108,21 @@ public class MinimumEditDistance {
             }
         }
 
+        printDPTable(table);
         return table[s1.length()][s2.length()];
     }
 
+    private static void printDPTable(int[][] table) {
+        System.out.println("\n\nDP Table: ");
+        for (int i = 0; i < table.length; i++) {
+            for (int j = 0; j < table[i].length; j++) {
+                System.out.printf("%d ", table[i][j]);
+            }
+            System.out.println();
+        }
 
+        System.out.println();
+    }
 }
 
 class MinimumEditDistanceTest {

@@ -94,10 +94,22 @@ class InversionsCountInArrayTest {
 
         System.out.println("Array: " + Arrays.toString(array1));
         System.out.println("Inversion Count by Brute Force: " + InversionsCountInArray.getCountByBruteForce(array1));
-        System.out.println("Inversion Count by Brute Force: " + InversionsCountInArray.getCountByBruteForce(array3));
+        System.out.println("Inversion Count by Merge Sort: " + InversionsCountInArray.getCountByMergeSort(array1));
         System.out.println();
+
         System.out.println("Array: " + Arrays.toString(array2));
         System.out.println("Inversion Count by Brute Force: " + InversionsCountInArray.getCountByBruteForce(array2));
+        System.out.println("Inversion Count by Merge Sort: " + InversionsCountInArray.getCountByMergeSort(array2));
+        System.out.println();
+
+        System.out.println("Array: " + Arrays.toString(array3));
+        System.out.println("Inversion Count by Brute Force: " + InversionsCountInArray.getCountByBruteForce(array3));
+        System.out.println("Inversion Count by Merge Sort: " + InversionsCountInArray.getCountByMergeSort(array3));
+        System.out.println();
+
+        System.out.println("Array: " + Arrays.toString(array4));
         System.out.println("Inversion Count by Brute Force: " + InversionsCountInArray.getCountByBruteForce(array4));
+        System.out.println("Inversion Count by Merge Sort: " + InversionsCountInArray.getCountByMergeSort(array4));
+        System.out.println();
     }
 }

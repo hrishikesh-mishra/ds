@@ -86,9 +86,17 @@ public class KnapsackProblem {
     }
 
     public static int solveByDP(int[] weights, int[] values, int capacity) {
-        int[][] table = new int[weights.length + 1][capacity + 1];
 
-        for (int i = 0; i < weights.length + 1; i++) {
+        /** Total number Of items **/
+        int totalNumberOfItems = weights.length;
+
+        /** DP Table to hold all best capacity for all item from 1 to n and all capacity from 1 to capacity **/
+        int[][] table = new int[totalNumberOfItems + 1][capacity + 1];
+
+        /** Iteration all items one by one **/
+        for (int i = 0; i < totalNumberOfItems + 1; i++) {
+
+            /** Checking for all weight **/
             for (int weight = 0; weight < capacity + 1; weight++) {
 
                 /** Base case: when capacity is zero or weight is zero **/

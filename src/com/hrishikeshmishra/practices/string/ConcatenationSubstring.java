@@ -2,6 +2,7 @@ package com.hrishikeshmishra.practices.string;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -96,11 +97,11 @@ class ConcatenationSubstringTest {
     public static void main(String[] args) {
         String str = "barfoothefoobarman";
         String[] words = {"foo", "bar"};
-        System.out.printf("String : %s, Words: %s, Indices: %s\n", str, words, getIndices(str, words));
+        System.out.printf("String : %s, Words: %s, Indices: %s\n", str, Arrays.toString(words), getIndices(str, words));
 
         String str2 = "wordgoodgoodgoodbestword";
         String[] words2 = {"word", "good", "best", "good"};
-        System.out.printf("String : %s, Words: %s, Indices: %s\n", str2, words2, getIndices(str2, words2));
+        System.out.printf("String : %s, Words: %s, Indices: %s\n", str2, Arrays.toString(words2), getIndices(str2, words2));
 
     }
 }

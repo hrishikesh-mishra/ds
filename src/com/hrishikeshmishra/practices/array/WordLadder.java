@@ -198,6 +198,7 @@ class WordLadderTest {
         System.out.println("End: " + end);
         System.out.println("Dictionary: " + dictionary);
         System.out.println("Minimum step: " + find(start, end, dictionary));
+
     }
 
 

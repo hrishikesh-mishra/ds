@@ -8,7 +8,7 @@ import java.util.Arrays;
  *
  * @author hrishikesh.mishra
  * @link http://hrishikeshmishra.com/quick-sort-hoare-partition/
- * @wiki https://en.wikipedia.org/wiki/Quicksort#Hoare_partition_scheme 
+ * @wiki https://en.wikipedia.org/wiki/Quicksort#Hoare_partition_scheme
  */
 public class QuickSortWithHoarePartition {
 

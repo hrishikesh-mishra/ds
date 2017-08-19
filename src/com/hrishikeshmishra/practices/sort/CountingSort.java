@@ -18,6 +18,7 @@ import java.util.Arrays;
 public class CountingSort {
 
     public static int[] sort(int[] input) {
+
         int max = findMax(input);
         int n = input.length;
         int[] output = new int[n];
