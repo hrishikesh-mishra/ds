@@ -1,6 +1,7 @@
 package com.hrishikeshmishra.practices.dynamicprogramming;
 
 import static com.hrishikeshmishra.practices.dynamicprogramming.StaircaseProblem.countStepsBottomUp;
+import static com.hrishikeshmishra.practices.dynamicprogramming.StaircaseProblem.countStepsOptimised;
 import static com.hrishikeshmishra.practices.dynamicprogramming.StaircaseProblem.countStepsTopDown;
 
 /**
@@ -90,6 +91,42 @@ public class StaircaseProblem {
 
         return dpTable[n];
     }
+
+
+    /**
+     *  Optimised solution in O(n)
+     *  Based on algorithm
+     *
+     *  dp[n+1] = dp[n] + dp[n] - dp[n-k]
+     *  i.e. dp[n+1] = 2 * dp[n] - dp[n-k]
+     *
+     * @param n
+     * @param k
+     * @return
+     */
+    public static int countStepsOptimised(int n, int k) {
+
+        int[] dpTable = new int[n + 1];
+
+        /**
+         * for 0th and 1st floors, there is one and only one way
+         **/
+        dpTable[0] = 1;
+        dpTable[1] = 1;
+
+        for (int step = 2; step <= n; step++) {
+
+            int previousStep = step - 1;
+
+            dpTable[step] = 2 * dpTable[previousStep];
+
+            if (previousStep - k >= 0) {
+                dpTable[step] -= dpTable[previousStep - k];
+            }
+        }
+
+        return dpTable[n];
+    }
 }
 
 
@@ -98,26 +135,38 @@ class StaircaseProblemTest {
 
         System.out.println("(Top Down) When n == 1 then, count = " + countStepsTopDown(1));
         System.out.println("(Bottom Up) When n == 1 then, count = " + countStepsBottomUp(1));
+        System.out.println("(Optimised) When n == 1 then, count = " + countStepsOptimised(1, 3));
+        System.out.println();
 
         System.out.println("(Top Down) When n == 2 then, count = " + countStepsTopDown(2));
         System.out.println("(Bottom Up) When n == 2 then, count = " + countStepsBottomUp(2));
+        System.out.println("(Optimised) When n == 1 then, count = " + countStepsOptimised(2, 3));
+        System.out.println();
 
         System.out.println("(Top Down) When n == 3 then, count = " + countStepsTopDown(3));
         System.out.println("(Bottom Up) When n == 3 then, count = " + countStepsBottomUp(3));
+        System.out.println("(Optimised) When n == 1 then, count = " + countStepsOptimised(3, 3));
+        System.out.println();
 
         System.out.println("(Top Down) When n == 4 then, count = " + countStepsTopDown(4));
         System.out.println("(Bottom Up) When n == 4 then, count = " + countStepsBottomUp(4));
+        System.out.println("(Optimised) When n == 1 then, count = " + countStepsOptimised(4, 3));
+        System.out.println();
 
         System.out.println("(Top Down) When n == 5 then, count = " + countStepsTopDown(5));
         System.out.println("(Bottom Up) When n == 5 then, count = " + countStepsBottomUp(5));
+        System.out.println("(Optimised) When n == 1 then, count = " + countStepsOptimised(5, 3));
+        System.out.println();
 
         System.out.println("(Top Down) When n == 6 then, count = " + countStepsTopDown(6));
         System.out.println("(Bottom Up) When n == 6 then, count = " + countStepsBottomUp(6));
+        System.out.println("(Optimised) When n == 1 then, count = " + countStepsOptimised(6, 3));
+        System.out.println();
 
         System.out.println("(Top Down) When n == 7 then, count = " + countStepsTopDown(7));
         System.out.println("(Bottom Up) When n == 7 then, count = " + countStepsBottomUp(7));
-
-
+        System.out.println("(Optimised) When n == 1 then, count = " + countStepsOptimised(7, 3));
+        System.out.println();
     }
 
 }
