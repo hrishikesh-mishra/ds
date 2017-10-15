@@ -1,6 +1,7 @@
 package com.hrishikeshmishra.practices.dynamicprogramming;
 
-import static com.hrishikeshmishra.practices.dynamicprogramming.StaircaseProblem.countSteps;
+import static com.hrishikeshmishra.practices.dynamicprogramming.StaircaseProblem.countStepsBottomUp;
+import static com.hrishikeshmishra.practices.dynamicprogramming.StaircaseProblem.countStepsTopDown;
 
 /**
  * Problem:
@@ -29,7 +30,13 @@ import static com.hrishikeshmishra.practices.dynamicprogramming.StaircaseProblem
  */
 public class StaircaseProblem {
 
-    public static int countSteps(int n) {
+    /**
+     * Top Down Approach
+     *
+     * @param n
+     * @return
+     */
+    public static int countStepsTopDown(int n) {
         return countStepsWithMemoization(n, new int[n + 1]);
     }
 
@@ -54,20 +61,63 @@ public class StaircaseProblem {
         }
     }
 
+
+    /**
+     * Bottom Up Approach
+     *
+     * @param n
+     * @return
+     */
+    public static int countStepsBottomUp(int n) {
+
+        int[] dpTable = new int[n + 1];
+
+        /**
+         * for 0th floor there is one and only one way
+         **/
+        dpTable[0] = 1;
+
+        for (int step = 1; step <= n; step++) {
+
+            dpTable[step] = 0;
+
+            for (int j = 1; j <= 3; j++) {
+                if (step - j >= 0) {
+                    dpTable[step] += dpTable[step - j];
+                }
+            }
+        }
+
+        return dpTable[n];
+    }
 }
 
 
 class StaircaseProblemTest {
     public static void main(String[] args) {
 
-        System.out.println("When n == 1 then, count = " + countSteps(1));
-        System.out.println("When n == 2 then, count = " + countSteps(2));
-        System.out.println("When n == 3 then, count = " + countSteps(3));
-        System.out.println("When n == 4 then, count = " + countSteps(4));
-        System.out.println("When n == 5 then, count = " + countSteps(5));
-        System.out.println("When n == 6 then, count = " + countSteps(6));
-        System.out.println("When n == 7 then, count = " + countSteps(7));
+        System.out.println("(Top Down) When n == 1 then, count = " + countStepsTopDown(1));
+        System.out.println("(Bottom Up) When n == 1 then, count = " + countStepsBottomUp(1));
+
+        System.out.println("(Top Down) When n == 2 then, count = " + countStepsTopDown(2));
+        System.out.println("(Bottom Up) When n == 2 then, count = " + countStepsBottomUp(2));
+
+        System.out.println("(Top Down) When n == 3 then, count = " + countStepsTopDown(3));
+        System.out.println("(Bottom Up) When n == 3 then, count = " + countStepsBottomUp(3));
+
+        System.out.println("(Top Down) When n == 4 then, count = " + countStepsTopDown(4));
+        System.out.println("(Bottom Up) When n == 4 then, count = " + countStepsBottomUp(4));
+
+        System.out.println("(Top Down) When n == 5 then, count = " + countStepsTopDown(5));
+        System.out.println("(Bottom Up) When n == 5 then, count = " + countStepsBottomUp(5));
+
+        System.out.println("(Top Down) When n == 6 then, count = " + countStepsTopDown(6));
+        System.out.println("(Bottom Up) When n == 6 then, count = " + countStepsBottomUp(6));
+
+        System.out.println("(Top Down) When n == 7 then, count = " + countStepsTopDown(7));
+        System.out.println("(Bottom Up) When n == 7 then, count = " + countStepsBottomUp(7));
 
 
     }
+
 }
